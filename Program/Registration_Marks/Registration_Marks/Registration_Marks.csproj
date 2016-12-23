@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F488FEF0-FFA0-4570-8893-4B2F3CFA4892}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Registration_Marks</RootNamespace>
+    <AssemblyName>Registration_Marks</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL\Insert_Data_BL.cs" />
+    <Compile Include="BL\Read_Data_BL.cs" />
+    <Compile Include="Crystale_R\ByID.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ByID.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystale_R\By_subject.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>By_subject.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystale_R\Section.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Section.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystale_R\semester_report.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>semester_report.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystale_R\studnet Information.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>studnet Information.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Crystale_R\subject mark.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>subject mark.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DAL\connection.cs" />
+    <Compile Include="DAL\insert_data_DAL.cs" />
+    <Compile Include="DAL\Read_Data_DAL.cs" />
+    <Compile Include="PL\Access  User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Access  User.Designer.cs">
+      <DependentUpon>Access  User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Begin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Begin.Designer.cs">
+      <DependentUpon>Begin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Cours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Cours.Designer.cs">
+      <DependentUpon>Cours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Enter Subject Information .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Enter Subject Information .Designer.cs">
+      <DependentUpon>Enter Subject Information .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Failed Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Failed Report.Designer.cs">
+      <DependentUpon>Failed Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Home .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Home .Designer.cs">
+      <DependentUpon>Home .cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Marks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Marks.Designer.cs">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Program.cs" />
+    <Compile Include="PL\Sbject Mark Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Sbject Mark Report.Designer.cs">
+      <DependentUpon>Sbject Mark Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Sections.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Sections.Designer.cs">
+      <DependentUpon>Sections.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Semester Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Semester Report.Designer.cs">
+      <DependentUpon>Semester Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Student Information.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Student Information.Designer.cs">
+      <DependentUpon>Student Information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\Student_information_Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\Student_information_Report.Designer.cs">
+      <DependentUpon>Student_information_Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\View Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\View Report.Designer.cs">
+      <DependentUpon>View Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Crystale_R\ByID.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ByID.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystale_R\By_subject.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>By_subject.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystale_R\Section.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Section.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystale_R\semester_report.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>semester_report.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystale_R\studnet Information.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>studnet Information.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crystale_R\subject mark.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>subject mark.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Access  User.resx">
+      <DependentUpon>Access  User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Begin.resx">
+      <DependentUpon>Begin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Cours.resx">
+      <DependentUpon>Cours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Enter Subject Information .resx">
+      <DependentUpon>Enter Subject Information .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Failed Report.resx">
+      <DependentUpon>Failed Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Home .resx">
+      <DependentUpon>Home .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Marks.resx">
+      <DependentUpon>Marks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Sbject Mark Report.resx">
+      <DependentUpon>Sbject Mark Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Sections.resx">
+      <DependentUpon>Sections.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Semester Report.resx">
+      <DependentUpon>Semester Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Student Information.resx">
+      <DependentUpon>Student Information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\Student_information_Report.resx">
+      <DependentUpon>Student_information_Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\View Report.resx">
+      <DependentUpon>View Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
